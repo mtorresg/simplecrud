@@ -10,13 +10,13 @@ SET FOREIGN_KEY_CHECKS = 0;;
 -- ----------------------------------------------------------------------------
 -- Schema simpleCrud
 -- ----------------------------------------------------------------------------
-DROP SCHEMA IF EXISTS `simpleCrud` ;
-CREATE SCHEMA IF NOT EXISTS `simpleCrud` ;
+DROP SCHEMA IF EXISTS `simplecrud` ;
+CREATE SCHEMA IF NOT EXISTS `simplecrud` ;
 
 -- ----------------------------------------------------------------------------
 -- Table simpleCrud.users
 -- ----------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `simpleCrud`.`users` (
+CREATE TABLE IF NOT EXISTS `simplecrud`.`users` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(20) CHARACTER SET 'utf8' NOT NULL,
   `lastname` VARCHAR(20) CHARACTER SET 'utf8' NOT NULL,
