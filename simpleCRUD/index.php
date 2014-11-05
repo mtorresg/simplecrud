@@ -22,14 +22,14 @@ while($row = $stmt->fetchObject()){
 <?php else: ?> 
   <table>
     <tr>
-      <!--<th>ID</th>-->
+      <th>ID</th>
       <th>Name</th>
       <th>Lastname</th>
       <th>Email</th>
     </tr>  
   <tr>    
   <?php foreach($users as $user):?>  
-   <!--<td><?php echo $user->id ?></td>-->
+   <td><?php echo $user->id ?></td>
     <td><?php echo $user->name ?></td>
     <td><?php echo $user->lastname ?> </td>   
     <td><?php echo $user->email ?></td>
