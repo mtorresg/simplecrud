@@ -10,8 +10,8 @@ SET FOREIGN_KEY_CHECKS = 0;;
 -- ----------------------------------------------------------------------------
 -- Schema simpleCrud
 -- ----------------------------------------------------------------------------
-DROP SCHEMA IF EXISTS `simpleCrud` ;
-CREATE SCHEMA IF NOT EXISTS `simpleCrud` ;
+DROP SCHEMA IF EXISTS `simplecrud` ;
+CREATE SCHEMA IF NOT EXISTS `simplecrud` ;
 
 -- ----------------------------------------------------------------------------
 -- Table simpleCrud.users
