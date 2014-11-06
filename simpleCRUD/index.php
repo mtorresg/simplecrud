@@ -35,7 +35,6 @@ while($row = $stmt->fetchObject()){
     <td><?php echo $user->email ?></td>
     <td><a href="update.php?id=<?php echo $user->id;?>&name=<?php echo $user->name;?>&lastname=<?php echo $user->lastname;?>&email=<?php echo $user->email;?>">Update</a></td>
     <td><a href="delete.php?id=<?php echo $user->id;?>" >Delete</a></td>        
-    <br/><br/>
   </tr>  
   <?php endforeach;?>  
   </table><br/><br/>  
