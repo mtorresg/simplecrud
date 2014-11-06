@@ -6,7 +6,6 @@ $errors = array( 'name'=>'','lastname' => '', 'email' => '');
 if(isset($_POST['name'],$_POST['lastname'],$_POST['email'])){
  if(!empty($_POST['name'])&&!empty($_POST['lastname'])&&!empty($_POST['email'])){
   
-   
   $name = $_POST['name'];
   $lastname = $_POST['lastname'];
   $email = $_POST['email'];
@@ -37,7 +36,6 @@ if(isset($_POST['name'],$_POST['lastname'],$_POST['email'])){
     echo 'Added';
   }  
  }
-  
 }
 ?>
 <!DOCTYPE html>
