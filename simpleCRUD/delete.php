@@ -1,5 +1,4 @@
 <?php
-
 require_once 'init.php';
 
 if(empty($_GET['id'])){
