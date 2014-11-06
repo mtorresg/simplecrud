@@ -1,6 +1,6 @@
 -- ----------------------------------------------------------------------------
 -- MySQL Workbench Migration
--- Migrated Schemata: simpleCrud
+-- Migrated Schemata: simplecrud
 -- Source Schemata: simplecrud
 -- Created: Tue Nov 04 14:56:08 2014
 -- ----------------------------------------------------------------------------
@@ -8,7 +8,7 @@
 SET FOREIGN_KEY_CHECKS = 0;;
 
 -- ----------------------------------------------------------------------------
--- Schema simpleCrud
+-- Schema simplecrud
 -- ----------------------------------------------------------------------------
 DROP SCHEMA IF EXISTS `simplecrud` ;
 CREATE SCHEMA IF NOT EXISTS `simplecrud` ;
