@@ -1,7 +1,7 @@
 simplecrud
 ==========
 I created this simple CRUD system using PHP. 
-There is no that much validation and no CSS was implemented. 
+There is no that much validation or CSS implemented. 
 
 The route to the index is ../index.php. This page will list 
 all the users and from there we can access the update and delete options. 
