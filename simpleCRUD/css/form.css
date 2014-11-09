@@ -1,0 +1,21 @@
+.form-group{    
+  left: 30%;
+  top: 50px;
+}
+.bluebar
+{
+  content: "Users";
+  height: 50px;
+  line-height: 50px;
+  background-color: #3071A9;  
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;  
+  text-transform: uppercase;
+  margin-bottom: 20px;   
+}
+.main-content{
+  top: 100px;
+}
+  

@@ -5,6 +5,7 @@ $errors = array( 'name'=>'','lastname' => '', 'email' => '');
 $name = '';
 $lastname = '';
 $email = '';
+$message = '';
 
 if(isset($_POST['name'],$_POST['lastname'],$_POST['email'])){
  if(!empty($_POST['name'])&&!empty($_POST['lastname'])&&!empty($_POST['email'])){
@@ -41,44 +42,49 @@ if(isset($_POST['name'],$_POST['lastname'],$_POST['email'])){
     $name = '';
     $lastname = '';
     $email = '';
-    
-    echo '<p class="text-success">', 'User added', '</p>'; 
+    $message = 'User added';
+    //echo '<p class="text-success">', 'c', '</p>'; 
   }
    
  } else {
-   echo '<p class="text-danger">', 'All fields are required', '</p>';   
+   $message = 'All fields are required';   
    $name = $_POST['name'];
    $lastname = $_POST['lastname'];
    $email = $_POST['email'];
  }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Add User</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">    
+  <link rel="stylesheet" href="css/form.css">
 </head>
-  <body>
-   <form action="add.php"  method="post" role="form">
-     <div class="form-group col-xs-4">
-       <label for="name">Name</label>  
-       <input type="text" class="form-control" name="name" value="<?php echo $name?>"/>
-       <span class="text-danger"><?php echo $errors['name'];?></span><br/>
+  <body>  
+  <div class="bluebar">Users</div>  
+  <div class="form-group col-xs-4">
+    <h3>Add a User</h3>
+     <form action="add.php"  method="post" role="form">
+         <div class="bg-info"><?php echo $message?></div>
+         <label for="name">Name</label>  
+         <input type="text" class="form-control" name="name" value="<?php echo $name?>"/>
+         <span class="text-danger"><?php echo $errors['name'];?></span><br/>
 
-       <label for="name">Last Name</label>
-       <input type="text" class="form-control" name="lastname" value="<?php echo $lastname?>"/>
-       <span class="text-danger"><?php echo $errors['lastname'];?></span><br/>
+         <label for="name">Last Name</label>
+         <input type="text" class="form-control" name="lastname" value="<?php echo $lastname?>"/>
+         <span class="text-danger"><?php echo $errors['lastname'];?></span><br/>
 
-       <label for="email">Email</label>
-       <input type="email" class="form-control" name='email' value="<?php echo $email?>" />
-       <span class="text-danger"><?php echo $errors['email'];?></span><br/><br/> 
+         <label for="email">Email</label>
+         <input type="email" class="form-control" name='email' value="<?php echo $email?>" />
+         <span class="text-danger"><?php echo $errors['email'];?></span><br/><br/> 
 
-       <input type="submit" class="btn btn-primary btn-md active" name="submit" value="Accept">
-       <a href="index.php" class="btn btn-default btn-md active">Back</a>
-     </div>
-    </form>
-  </body>
+
+         <input type="submit" class="btn btn-primary btn-md active" name="submit" value="Accept">
+         <a href="index.php" class="btn btn-default btn-md active">Back</a>     
+      </form>
+    </div>
+    <!--<div class="bluebar"></div>-->
+  </body>  
 </html>

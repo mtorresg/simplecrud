@@ -15,15 +15,18 @@ while($row = $stmt->fetchObject()){
   <meta charset="UTF-8">
   <title>List Users</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/form.css">
 </head>
+ <div class="bluebar">Users</div>
   <body>   
   <?php if(empty($users)): ?> 
   <?php echo '<p class="text-warning">','No users','</p>'; ?>
   <?php echo  '<br/><a href="add.php" class="btn btn-primary btn-md active">Create new</a>'?>
   <?php else: ?> 
-   
+  
+  <div class="main-content">
     <table class="table">
-      <tr>      
+      <tr>             
         <th>Name</th>
         <th>Lastname</th>
         <th>Email</th>
@@ -33,11 +36,12 @@ while($row = $stmt->fetchObject()){
         <td><?php echo $user->name ?></td>
         <td><?php echo $user->lastname ?> </td>   
         <td><?php echo $user->email ?></td>        
-        <td><a href="update.php?id=<?php echo $user->id;?>&name=<?php echo $user->name;?>&lastname=<?php echo $user->lastname;?>&email=<?php echo $user->email;?>">Update</a></td>
+        <td><a href="update.php?id=<?php echo $user->id;?>&name=<?php echo $user->name;?>&lastname=<?php echo $user->lastname;?>&email=<?php echo $user->email;?>">Edit</a></td>
         <td><a href="delete.php?id=<?php echo $user->id;?>" >Delete</a></td>            
         </tr>    
     <?php endforeach;?>    
     </table><br/><br/>      
+    </div>
     <a href="add.php" class="btn btn-primary btn-md active">Create new</a>
     
   <?php endif; ?>
